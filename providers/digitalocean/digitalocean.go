@@ -69,8 +69,6 @@ func (p *DigitalOceanProvider) Init(rootDomainName string) error {
 		return err
 	}
 
-	// DO's TTLs are domain-wide.
-	config.TTL = domains.TTL
 	logrus.Infof("Configured %s with email %s and domain %s", p.GetName(), acct.Email, domains.Name)
 	return nil
 }
